@@ -1,0 +1,6 @@
+# Use the output of the previous command to find the name and 
+# IP address of the device that makes the link between you 
+# (local network) and the outside world
+
+After traceroute command, I find the line with info on nat on line 3: 
+'3  nat (10.90.1.11)  0.247 ms  0.227 ms  0.149 ms'
