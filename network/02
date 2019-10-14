@@ -1,0 +1,7 @@
+# Identify and display the Ethernet interface characteristics:
+
+# identify broadcast address
+broadcastip=`ifconfig en0 | grep broadcast | awk '{print $6}'` && print $broadcastip
+
+# identify all IP addresses which are part of the same subnet
+ping -c 3 $broadcastip | grep 'bytes from' | awk '{print $4}' | tr -d ':' | sort | uniq
