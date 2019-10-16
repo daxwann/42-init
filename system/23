@@ -1,0 +1,7 @@
+# Explain how connect yourself as new user. (With graphic session and ssh session)
+
+In GUI mode, you first log on as a current user, and then in Account Settings, unlock as Administrator, then create new user. Then switch user to the newly created user.
+
+In headless mode, you can ssh into the VM with this command 
+`ssh -p <port> <currentusername>@<host_ip>`. 
+In the new shell, switch user to root with `su` command. Add a new user with `adduser` command. Then switch to that new user.
