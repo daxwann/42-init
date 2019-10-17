@@ -1,0 +1,10 @@
+#!/bin/bash
+# Write a script which delete an ACTIVE user on the VM.
+
+if [ $(whoami) != "root" ]; then
+  echo "Only root has permission to do that."
+elif [ "$#" -ne 1 ]; then
+  echo "usage: $ ./02 <username>"
+else
+  deluser --force --remove-home $1
+fi 
